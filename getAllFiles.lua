@@ -4,11 +4,11 @@ if content then
     for i = 1, #r.tree do
         name = r.tree[i].path
         print(name)
-        url = "https://raw.githubusercontent.com/OscarSalu85/CC-Mason/main/" .. name .. ".lua"
-        file = http.get(url)
+        url = "https://raw.githubusercontent.com/OscarSalu85/CC-Mason/main/" .. name
+        file = http.get(url).readAll()
         if file then
             f = fs.open(name,"w")
-            f.write(file.readAll())
+            f.write(file)
         end
     end
 end
