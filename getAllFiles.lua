@@ -3,7 +3,7 @@ if content then
     r = textutils.unserialiseJSON(content)
     for i = 1, #r.tree do
         name = r.tree[i].path
-        name = string.sub(name, (#text - 4))
+        name = name:sub(1,-5)
         print(name)
         url = "https://raw.githubusercontent.com/OscarSalu85/CC-Mason/main/" .. name .. ".lua"
         file = http.get(url).readAll()
