@@ -1,6 +1,6 @@
 local files = fs.list("")
 for i = 1, #files do
-    if not files[i] == "rom" then
+    if files[i] ~= "rom" then
         print(files[i])
         content = http.get("https://raw.githubusercontent.com/OscarSalu85/CC-Mason/main/" .. files[i] .. ".lua").readAll()
         if content then
