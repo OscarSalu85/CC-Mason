@@ -1,4 +1,4 @@
-local files = fs.list("/rom/")
+local files = fs.list()
 for i = 1, #files do
     print(files[i])
     content = http.get("https://raw.githubusercontent.com/OscarSalu85/CC-Mason/main/" .. files[i] .. ".lua").readAll()
