@@ -1,3 +1,4 @@
+-- Updates all files with github repository
 local files = fs.list("")
 for i = 1, #files do
     if files[i] ~= "rom" then
