@@ -15,3 +15,9 @@ for i=1, #head do
     Animatronic.setRightArmRot(rightarm[i][1],rightarm[i][2],rightarm[i][3])
     Animatronic.push()
 end
+
+Animatronic.setBodyRot(0,0,0)
+Animatronic.setHeadRot(0,0,0)
+Animatronic.setLeftArmRot(0,0,0)
+Animatronic.setRightArmRot(0,0,0)
+Animatronic.push()
