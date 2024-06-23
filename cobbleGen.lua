@@ -4,7 +4,9 @@ function checkChest(c)
     count = 0
     for i = 1, 9 do
         item = c.getItemDetail(i)
-        count = count + item.count
+        if item then
+            count = count + item.count
+        end
     end
     if count < 576 then
         return true
