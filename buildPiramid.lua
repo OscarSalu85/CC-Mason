@@ -9,7 +9,9 @@ for i = 1, height do
     for x = 1, newBase do
         for z = 1, newBase do
             turtle.placeDown()
-            turtle.forward()
+            if z < newBase then
+                turtle.forward()
+            end
         end
         if x % 2 and x < newBase then
             turtle.turnLeft()
