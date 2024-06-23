@@ -5,7 +5,7 @@ height = math.ceil(base/2)
 turtle.up()
 turtle.forward()
 for i = 1, height do
-    newBase = math.ceil(base / 2^(i-1))
+    newBase = base -2 * (i - 1)
     for x = 1, newBase do
         for z = 1, newBase do
             turtle.placeDown()
