@@ -15,8 +15,9 @@ while true do
         Animatronic.setLeftArmRot(leftarm[i][1],leftarm[i][2],leftarm[i][3])
         Animatronic.setRightArmRot(rightarm[i][1],rightarm[i][2],rightarm[i][3])
         Animatronic.push()
+        sleep(0.5)
     end
-    
+    sleep(5)
     Animatronic.setBodyRot(0,0,0)
     Animatronic.setHeadRot(0,0,0)
     Animatronic.setLeftArmRot(0,0,0)
