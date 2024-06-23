@@ -24,10 +24,11 @@ for i = 1, height do
         end
     end
     turtle.turnLeft()
-    turtle.turnLeft()
     turtle.forward()
     turtle.turnLeft()
     turtle.forward()
-    turtle.turnRight()
+    if newBase % 2 == 0 then
+        turtle.turnRight()
+    end
     turtle.up()
 end
