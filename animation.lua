@@ -1,4 +1,4 @@
-content = f.open("saludoRoig.json","r").readAll()
+content = fs.open("saludoRoig.json","r").readAll()
 json = textutils.unserialiseJSON(content)
 
 head = json.animations.animations_template.bones.head
