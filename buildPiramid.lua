@@ -11,11 +11,11 @@ for i = 1, height do
             turtle.placeDown()
             turtle.forward()
         end
-        if x % 2 then
+        if x % 2 and x < newBase then
             turtle.turnLeft()
             turtle.forward()
             turtle.turnLeft()
-        else
+        elseif x < newBase then
             turtle.turnRight()
             turtle.forward()
             turtle.turnRight()
