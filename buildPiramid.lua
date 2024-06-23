@@ -25,5 +25,9 @@ for i = 1, height do
     end
     turtle.turnLeft()
     turtle.turnLeft()
+    turtle.forward()
+    turtle.turnLeft()
+    turtle.forward()
+    turtle.turnRight()
     turtle.up()
 end
