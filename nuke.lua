@@ -1,4 +1,4 @@
 turtle.forward()
 turtle.placeDown()
-redstone.setOutput("bottom", on)
+redstone.setOutput("bottom", true)
 turtle.forward()
