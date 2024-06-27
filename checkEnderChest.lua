@@ -16,7 +16,7 @@ end
 
 while true do
     if checkChest(chest) then
-        redstone.setOutput("bottom",true)
+        redstone.setOutput("bottom",false)
     end
-    redstone.setOutput("bottom",false)
+    redstone.setOutput("bottom",true)
 end
