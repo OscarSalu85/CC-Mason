@@ -9,14 +9,15 @@ function checkChest(c)
         end
     end
     if count < 576 then
-        return false
+        return true
     end
-    return true
+    return false
 end
 
 while true do
     if checkChest(chest) then
         redstone.setOutput("bottom",false)
+    else
+        redstone.setOutput("bottom",true)
     end
-    redstone.setOutput("bottom",true)
 end
