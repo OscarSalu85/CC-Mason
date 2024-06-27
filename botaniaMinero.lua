@@ -1,6 +1,6 @@
 mineroChest = peripheral.wrap("left")
 piedraChest = peripheral.wrap("right")
-turtleName = modem.getNameLocal()
+turtleName = turtle.getNameLocal()
 
 
 function checkChest(c)
