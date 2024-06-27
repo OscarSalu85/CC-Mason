@@ -1,5 +1,6 @@
 mineroChest = peripheral.wrap("left")
 piedraChest = peripheral.wrap("right")
+turtleName = modem.getNameLocal()
 
 
 function checkChest(c)
@@ -21,7 +22,7 @@ function putStone(side)
         item = piedraChest.getItemDetail(i)
         if item and item.name == "minecraft:stone" then
             turtle.select(9)
-            pullItems(piedraChest,i,1,9)
+            piedraChest.pullItems(turtleName,i,1,1)
             if side == "f" then
                 turtle.place()
             elseif side == "u" then
