@@ -43,7 +43,7 @@ while true do
                 if data.name ~= "minecraft:stone" then
                     turtle.dig()
                     turtle.turnLeft()
-                    turtle.drop(1)
+                    turtle.drop()
                     turtle.turnRight()
 
                 end
@@ -59,7 +59,7 @@ while true do
                 if data.name ~= "minecraft:stone" then
                     turtle.digUp()
                     turtle.turnLeft()
-                    turtle.drop(1)
+                    turtle.drop()
                     turtle.turnRight()
 
                 end           
@@ -74,7 +74,7 @@ while true do
                 if data.name ~= "minecraft:stone" then
                     turtle.digDown()
                     turtle.turnLeft()
-                    turtle.drop(1)
+                    turtle.drop()
                     turtle.turnRight()
 
                 end
