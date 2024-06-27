@@ -40,7 +40,6 @@ while true do
         side = "f"
         if turtle.detect() then
             bool, data = turtle.inspect()
-            io.write(data.name)
                 if data.name ~= "minecraft:stone" then
                     turtle.dig()
                     turtle.turnLeft()
@@ -56,8 +55,7 @@ while true do
 
         side = "u"
         if turtle.detectUp() then
-            bool, data = turtle.inspect()
-            io.write(data.name)
+            bool, data = turtle.inspectUp()
                 if data.name ~= "minecraft:stone" then
                     turtle.digUp()
                     turtle.turnLeft()
@@ -72,8 +70,7 @@ while true do
 
         side = "d"
         if turtle.detectDown() then
-            bool, data = turtle.inspect()
-            io.write(data.name)
+            bool, data = turtle.inspectDown()
                 if data.name ~= "minecraft:stone" then
                     turtle.digDown()
                     turtle.turnLeft()
