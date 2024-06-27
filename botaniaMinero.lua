@@ -21,7 +21,7 @@ function putStone(side)
         item = piedraChest.getItemDetail(i)
         if item and item.tag == "forge:stone" then
             turtle.select(9)
-            pullItems(piedraChest,i,1)
+            pullItems(piedraChest,i,1,9)
             if side == "f" then
                 turtle.place()
             elseif side == "u" then
