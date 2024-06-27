@@ -20,7 +20,7 @@ function putStone(side)
         item = piedraChest.getItemDetail(i)
         if item and item.name == "minecraft:stone" then
             turtle.turnRight()
-            turtle.suck()
+            turtle.suck(1)
             turtle.turnLeft()
             if side == "f" then
                 turtle.place()
@@ -38,7 +38,15 @@ while true do
     if checkChest(mineroChest) then
         side = "f"
         if turtle.detect() then
-            
+            bool, data = turtle.inspect()
+                if data.name ~= "minecraft:stone" then
+                    turtle.dig()
+                    turtle.turnLeft()
+                    turtle.drop(1)
+                    turtle.turnRight()
+
+                end
+
         else
             io.write("Putting stone at front\n")
             putStone(side)
@@ -46,7 +54,14 @@ while true do
 
         side = "u"
         if turtle.detectUp() then
-            
+            bool, data = turtle.inspect()
+                if data.name ~= "minecraft:stone" then
+                    turtle.digUp()
+                    turtle.turnLeft()
+                    turtle.drop(1)
+                    turtle.turnRight()
+
+                end           
         else
             io.write("Putting stone at front\n")
             putStone(side)
@@ -54,7 +69,14 @@ while true do
 
         side = "d"
         if turtle.detectDown() then
-            
+            bool, data = turtle.inspect()
+                if data.name ~= "minecraft:stone" then
+                    turtle.digDown()
+                    turtle.turnLeft()
+                    turtle.drop(1)
+                    turtle.turnRight()
+
+                end
         else
             io.write("Putting stone at front\n")
             putStone(side)
