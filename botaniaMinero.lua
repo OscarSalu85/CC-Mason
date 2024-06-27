@@ -1,7 +1,5 @@
 mineroChest = peripheral.wrap("left")
 piedraChest = peripheral.wrap("right")
-turtleName = turtle.getNameLocal()
-
 
 function checkChest(c)
     count = 0
@@ -21,8 +19,9 @@ function putStone(side)
     for i = 1, 9 do
         item = piedraChest.getItemDetail(i)
         if item and item.name == "minecraft:stone" then
-            turtle.select(9)
-            piedraChest.pullItems(turtleName,i,1,1)
+            turtle.turnLeft()
+            turtle.suck()
+            turtle.turnRight()
             if side == "f" then
                 turtle.place()
             elseif side == "u" then
