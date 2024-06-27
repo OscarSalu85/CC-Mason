@@ -49,7 +49,6 @@ while true do
                 end
 
         else
-            io.write("Putting stone at front\n")
             putStone(side)
         end
 
@@ -64,7 +63,6 @@ while true do
 
                 end           
         else
-            io.write("Putting stone at front\n")
             putStone(side)
         end
 
@@ -79,7 +77,6 @@ while true do
 
                 end
         else
-            io.write("Putting stone at front\n")
             putStone(side)
         end
 
