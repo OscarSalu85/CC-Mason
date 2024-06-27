@@ -35,6 +35,7 @@ function putStone(side)
 end
 
 while true do
+    turtle.select(1)
     if checkChest(mineroChest) then
         side = "f"
         if turtle.detect() then
