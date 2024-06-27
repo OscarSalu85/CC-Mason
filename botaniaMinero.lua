@@ -19,8 +19,7 @@ end
 function putStone(side)
     for i = 1, 9 do
         item = piedraChest.getItemDetail(i)
-        io.write(item.name)
-        if item and item.name == "stone" then
+        if item and item.name == "minecraft:stone" then
             turtle.select(9)
             pullItems(piedraChest,i,1,9)
             if side == "f" then
