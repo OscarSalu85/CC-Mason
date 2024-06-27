@@ -19,9 +19,9 @@ function putStone(side)
     for i = 1, 9 do
         item = piedraChest.getItemDetail(i)
         if item and item.name == "minecraft:stone" then
-            turtle.turnLeft()
-            turtle.suck()
             turtle.turnRight()
+            turtle.suck()
+            turtle.turnLeft()
             if side == "f" then
                 turtle.place()
             elseif side == "u" then
