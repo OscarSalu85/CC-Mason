@@ -39,6 +39,7 @@ while true do
         if turtle.detect() then
             
         else
+            io.write("Putting stone at front")
             putStone(side)
         end
 
@@ -46,6 +47,7 @@ while true do
         if turtle.detectUp() then
             
         else
+            io.write("Putting stone up")
             putStone(side)
         end
 
@@ -53,6 +55,7 @@ while true do
         if turtle.detectDown() then
             
         else
+            io.write("Putting stone down")
             putStone(side)
         end
 
