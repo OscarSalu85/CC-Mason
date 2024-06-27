@@ -19,6 +19,7 @@ end
 function putStone(side)
     for i = 1, 9 do
         item = piedraChest.getItemDetail(i)
+        print(item.name)
         if item and item.name == "stone" then
             turtle.select(9)
             pullItems(piedraChest,i,1,9)
@@ -29,6 +30,7 @@ function putStone(side)
             elseif side == "d" then
                 turtle.placeDown()
             end
+            return
         end
     end
 end
@@ -39,7 +41,7 @@ while true do
         if turtle.detect() then
             
         else
-            io.write("Putting stone at front")
+            io.write("Putting stone at front\n")
             putStone(side)
         end
 
@@ -47,7 +49,7 @@ while true do
         if turtle.detectUp() then
             
         else
-            io.write("Putting stone up")
+            io.write("Putting stone at front\n")
             putStone(side)
         end
 
@@ -55,7 +57,7 @@ while true do
         if turtle.detectDown() then
             
         else
-            io.write("Putting stone down")
+            io.write("Putting stone at front\n")
             putStone(side)
         end
 
