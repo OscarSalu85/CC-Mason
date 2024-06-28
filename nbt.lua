@@ -1,4 +1,4 @@
 reader = peripheral.wrap("bottom")
 
-state = reader.getBlockStates()
+state = reader.getBlockData()
 io.write(textutils.serialise(state))
