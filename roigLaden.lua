@@ -1,4 +1,4 @@
-while true do
-    suc, data = turtle.inspectDown()
-    io.write(textutils.serialise(data) .. "\n")
-end
+monitor = peripheral.wrap("left")
+
+suc, data = turtle.inspectDown()
+monitor.write(textutils.serialise(data))
