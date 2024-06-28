@@ -4,8 +4,7 @@ writer = peripheral.find("nbtStorage")
 state = reader.getBlockData()
 io.write(state.mana)
 state.mana = 5000
-json = textutils.serialiseJSON(state)
-storage.writeJson(json)
+write.writeTable(state)
 
 state2 = reader.getBlockData()
 io.write(textutils.serialise(state2))
