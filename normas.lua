@@ -34,14 +34,14 @@ while true do
                 chat.sendMessageToPlayer("Formato incorrecto, usa 'permit help para ver el formato",username, "Server")
             else
                 if matar == "Y" then
-                    matar = '{"text":"M","color":"green"},'
+                    matar = '{"text":"M ","color":"green"},'
                 else
-                    matar = '{"text":"M","color":"red"},'
+                    matar = '{"text":"M ","color":"red"},'
                 end
                 if modif == "Y" then
-                    modif = '{"text":"MC","color":"green"},'
+                    modif = '{"text":"MC ","color":"green"},'
                 else
-                    modif = '{"text":"MC","color":"red"},'
+                    modif = '{"text":"MC ","color":"red"},'
                 end
                 if robar == "Y" then
                     robar = '{"text":"R","color":"green"},'
