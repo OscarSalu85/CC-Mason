@@ -10,7 +10,6 @@ while true do
             chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
             chat.sendMessageToPlayer("- 'permit edit <Modificar Casa> <Matar> <Robar>' -> Editar permisos para otros jugadores, rellenar con S/N (Si o No)",username, "Server")
         elseif command == "bobo" then
-            io.write("Bobo --> " .. username)
             commands.exec("team add " .. username)
             commands.exec("team modify " .. username ..' prefix {"text":"[","color":"red","extra":[{"text":"BOBO","color":"white"},{"text":"] ","color":"red"}] }')
             commands.exec("team join " .. username .. " " .. username)
