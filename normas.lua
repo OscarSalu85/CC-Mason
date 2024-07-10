@@ -10,7 +10,8 @@ while true do
             phelp = {
                 {text = "- "},
                 {text = "'permit help'" , color = "red"},
-                {text = " -> Ver todos los comandos disponibles" , color = "orange"}
+                {text = " -> "},
+                {text = " -> Ver todos los comandos disponibles" , color = "green"}
             }
             json = textutils.serialiseJSON(phelp)
             --chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
