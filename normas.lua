@@ -12,8 +12,9 @@ while true do
                 {text = "'permit help'" , color = "red"},
                 {text = " -> Ver todos los comandos disponibles" , color = "orange"}
             }
+            json = textutils.serialiseJSON(phelp)
             --chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
-            chat.sendFormattedMessageToPlayer(phelp,username, "Server")
+            chat.sendFormattedMessageToPlayer(json,username, "Server")
             sleep(1)
             chat.sendMessageToPlayer("- 'permit edit <Modificar Casa> <Matar> <Robar>' -> Editar permisos de cara a otros jugadores, rellenar con S/N (Si o No)",username, "Server")
         elseif command == "edit" then
