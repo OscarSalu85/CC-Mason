@@ -4,6 +4,7 @@ while true do
     inicio = string.sub(message,1,6)
     command = string.sub(message,8,12)
     if inicio == "permit" then
+        io.write(command)
         if command == "help" then
             chat.sendMessageToPlayer("Comandos disponibles:",username, "Server")
             chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
@@ -18,6 +19,9 @@ while true do
             modif = string.sub(message,14,15)
             matar = string.sub(message,17,18)
             robar = string.sub(message,20,21)
+            io.write(modif)
+            io.write(matar)
+            io.write(robar)
             if not (modif == "Y" or modif == "N") then
                 error = true
             end
