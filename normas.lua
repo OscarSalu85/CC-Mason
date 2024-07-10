@@ -23,29 +23,29 @@ while true do
             io.write(modif)
             io.write(matar)
             io.write(robar)
-            if not (modif == "Y" or modif == "N") then
+            if not (modif == "S" or modif == "N") then
                 error = true
             end
-            if not (matar == "Y" or matar == "N") then
+            if not (matar == "S" or matar == "N") then
                 error = true
             end
-            if not (robar == "Y" or robar == "N") then
+            if not (robar == "S" or robar == "N") then
                 error = true
             end
             if error then
                 chat.sendMessageToPlayer("Formato incorrecto, usa 'permit help para ver el formato",username, "Server")
             else
-                if matar == "Y" then
+                if matar == "S" then
                     matar = '{"text":"M ","color":"green"},'
                 else
                     matar = '{"text":"M ","color":"red"},'
                 end
-                if modif == "Y" then
+                if modif == "S" then
                     modif = '{"text":"MC ","color":"green"},'
                 else
                     modif = '{"text":"MC ","color":"red"},'
                 end
-                if robar == "Y" then
+                if robar == "S" then
                     robar = '{"text":"R","color":"green"},'
                 else
                     robar = '{"text":"R","color":"red"},'
