@@ -2,7 +2,7 @@ chat = peripheral.find("chatBox")
 while true do
     local event, username, message = os.pullEvent("chat")
     inicio = string.sub(message,1,6)
-    command = string.sub(message,8,12)
+    command = string.sub(message,8,11)
     if inicio == "permit" then
         io.write(command)
         if command == "help" then
@@ -16,9 +16,9 @@ while true do
             commands.exec("team join " .. username .. " " .. username)
         elseif command == "edit" then
             error = false
-            modif = string.sub(message,14,15)
-            matar = string.sub(message,17,18)
-            robar = string.sub(message,20,21)
+            modif = string.sub(message,13,14)
+            matar = string.sub(message,16,17)
+            robar = string.sub(message,19,20)
             io.write(modif)
             io.write(matar)
             io.write(robar)
