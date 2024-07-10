@@ -6,7 +6,7 @@ while true do
     if inicio == "permit" then
         --io.write(command)
         if command == "help" then
-            chat.sendMessageToPlayer("Comandos disponibles:",username, "Server")
+            chat.sendMessageToPlayer("Comandos disponibles:",username, "Server", "Box", "<>", "&b")
             sleep(1)
             chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
             sleep(1)
