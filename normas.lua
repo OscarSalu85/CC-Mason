@@ -7,7 +7,9 @@ while true do
         --io.write(command)
         if command == "help" then
             chat.sendMessageToPlayer("Comandos disponibles:",username, "Server")
+            sleep(1)
             chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
+            sleep(1)
             chat.sendMessageToPlayer("- 'permit edit <Modificar Casa> <Matar> <Robar>' -> Editar permisos para otros jugadores, rellenar con S/N (Si o No)",username, "Server")
         elseif command == "bobo" then
             commands.exec("team add " .. username)
