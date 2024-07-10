@@ -9,7 +9,7 @@ while true do
             sleep(1)
             chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
             sleep(1)
-            chat.sendMessageToPlayer("- 'permit edit <Modificar Casa> <Matar> <Robar>' -> Editar permisos para otros jugadores, rellenar con S/N (Si o No)",username, "Server")
+            chat.sendMessageToPlayer("- 'permit edit <Modificar Casa> <Matar> <Robar>' -> Editar permisos de cara a otros jugadores, rellenar con S/N (Si o No)",username, "Server")
         elseif command == "edit" then
             error = false
             modif = string.sub(message,13,13)
