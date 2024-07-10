@@ -5,9 +5,9 @@ while true do
     final = string.sub(message,7)
     if inicio == "$permit" then
         if final == " help" then
-            chat.sendMessage("Toma ayuda bobo")
+            chat.sendMessage("Toma ayuda bobo", "El computer")
         else
-            chat.sendMessage("Pero pon algo bobo")
+            chat.sendMessage("Pero pon algo bobo", "El computer")
         end
     end
 end
