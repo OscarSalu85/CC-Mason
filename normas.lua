@@ -2,18 +2,18 @@ chat = peripheral.find("chatBox")
 while true do
     local event, username, message = os.pullEvent("chat")
     inicio = string.sub(message,1,6)
-    command = string.sub(message,7,12)
+    command = string.sub(message,8,12)
     if inicio == "permit" then
-        if command == " help" then
+        if command == "help" then
             chat.sendMessageToPlayer("Comandos disponibles:",username, "Server")
             chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
             chat.sendMessageToPlayer("- 'permit edit <Modificar Casa> <Matar> <Robar>' -> Editar permisos para otros jugadores, rellenar con S/N (Si o No)",username, "Server")
-        elseif command == " bobo" then
+        elseif command == "bobo" then
             io.write("Bobo --> " .. username)
             commands.exec("team add " .. username)
             commands.exec("team modify " .. username ..' prefix {"text":"[","color":"red","extra":[{"text":"BOBO","color":"white"},{"text":"] ","color":"red"}] }')
             commands.exec("team join " .. username .. " " .. username)
-        elseif command == " edit" then
+        elseif command == "edit" then
             error = false
             modif = string.sub(message,14,15)
             matar = string.sub(message,17,18)
