@@ -1,13 +1,13 @@
 chat = peripheral.find("chatBox")
 while true do
     local event, username, message = os.pullEvent("chat")
-    inicio = string.sub(message,1,7)
-    final = string.sub(message,7)
+    inicio = string.sub(message,1,6)
+    final = string.sub(message,8)
     if inicio == "~permit" then
         if final == " help" then
-            chat.sendMessage("Toma ayuda bobo", "El computer")
+            chat.sendMessageToPlayer("Toma ayuda bobo",username, "Server")
         else
-            chat.sendMessage("Pero pon algo bobo", "El computer")
+            chat.sendMessageToPlayer("Pero pon algo bobo",username, "Server")
         end
     end
 end
