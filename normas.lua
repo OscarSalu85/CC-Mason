@@ -9,8 +9,8 @@ while true do
         elseif final == " bobo" then
             io.write("Bobo --> " .. username)
             commands.exec("team add " .. username)
-            commands.exec("team modify " .. username .." prefix [Bobo]")
-            commands.exec("team join " .. username .. ' "' .. username .. '"')
+            commands.exec("team modify " .. username ..' prefix "[Bobo]"')
+            commands.exec("team join " .. username .. " " .. username)
 
         else
             chat.sendMessageToPlayer("Pero pon algo bobo",username, "Server")
