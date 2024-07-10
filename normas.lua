@@ -5,12 +5,15 @@ while true do
     command = string.sub(message,8,11)
     if inicio == "permit" then
         if command == "help" then
+
             pcom = {
                 {text = "Comandos disponibles:" , color = "dark_purple"}
             }
             json = textutils.serialiseJSON(pcom)
             chat.sendFormattedMessageToPlayer(json,username, "Server")
+
             sleep(1)
+
             phelp = {
                 {text = "- "},
                 {text = "'permit help'" , color = "red"},
@@ -19,7 +22,9 @@ while true do
             }
             json = textutils.serialiseJSON(phelp)
             chat.sendFormattedMessageToPlayer(json,username, "Server")
+
             sleep(1)
+
             pedit = {
                 {text = "- "},
                 {text = "'permit edit <Modificar Casa> <Matar> <Robar>'" , color = "red"},
@@ -28,6 +33,7 @@ while true do
             }
             json = textutils.serialiseJSON(pedit)
             chat.sendFormattedMessageToPlayer(json,username, "Server")
+            
         elseif command == "edit" then
             error = false
             modif = string.sub(message,13,13)
