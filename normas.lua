@@ -6,7 +6,7 @@ while true do
     if inicio == "~permit" then
         if final == " help" then
             chat.sendMessageToPlayer("Toma ayuda bobo",username, "Server")
-        if final == "bobo" then
+        elseif final == "bobo" then
             commands.exec("team add " .. username)
             commands.exec("team modify " .. username .." prefix [Bobo]")
         else
