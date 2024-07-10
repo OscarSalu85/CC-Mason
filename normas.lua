@@ -16,9 +16,9 @@ while true do
 
             phelp = {
                 {text = "- "},
-                {text = "'permit help'" , color = "red"},
+                {text = "'permit help'" , color = "gold"},
                 {text = " -> "},
-                {text = "Ver todos los comandos disponibles" , color = "green"}
+                {text = "Ver todos los comandos disponibles" , color = "aqua"}
             }
             json = textutils.serialiseJSON(phelp)
             chat.sendFormattedMessageToPlayer(json,username, "Server")
@@ -27,13 +27,13 @@ while true do
 
             pedit = {
                 {text = "- "},
-                {text = "'permit edit <Modificar Casa> <Matar> <Robar>'" , color = "red"},
+                {text = "'permit edit <Modificar Casa> <Matar> <Robar>'" , color = "gold"},
                 {text = " -> "},
-                {text = "Editar permisos de cara a otros jugadores, rellenar con S/N (Si o No)" , color = "green"}
+                {text = "Editar permisos de cara a otros jugadores, rellenar con S/N (Si o No)" , color = "aqua"}
             }
             json = textutils.serialiseJSON(pedit)
             chat.sendFormattedMessageToPlayer(json,username, "Server")
-            
+
         elseif command == "edit" then
             error = false
             modif = string.sub(message,13,13)
