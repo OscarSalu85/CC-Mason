@@ -4,7 +4,7 @@ while true do
     inicio = string.sub(message,1,6)
     command = string.sub(message,8,11)
     if inicio == "permit" then
-        io.write(command)
+        --io.write(command)
         if command == "help" then
             chat.sendMessageToPlayer("Comandos disponibles:",username, "Server")
             chat.sendMessageToPlayer("- 'permit help' -> Ver todos los comandos disponibles",username, "Server")
@@ -16,9 +16,9 @@ while true do
             commands.exec("team join " .. username .. " " .. username)
         elseif command == "edit" then
             error = false
-            modif = string.sub(message,13,14)
-            matar = string.sub(message,16,17)
-            robar = string.sub(message,19,20)
+            modif = string.sub(message,13,13)
+            matar = string.sub(message,15,15)
+            robar = string.sub(message,17,17)
             io.write(modif)
             io.write(matar)
             io.write(robar)
@@ -50,7 +50,7 @@ while true do
                     robar = '{"text":"R","color":"red"},'
                 end
                 commands.exec("team add " .. username)
-                commands.exec("team modify " .. username ..' prefix {"text":"[","color":"white","extra":[' .. modif .. matar .. robar .. '{"text":"] ","color":"white"}] }')
+                commands.exec("team modify " .. username ..' prefix {"text":"[","color":"white","extra":[' .. modif .. " " .. matar .. " " .. robar .. '{"text":"] ","color":"white"}] }')
                 commands.exec("team join " .. username .. " " .. username)
             end
             
