@@ -70,7 +70,9 @@ while true do
                 commands.exec("team modify " .. username ..' prefix {"text":"[","color":"white","extra":[' .. modif .. " " .. matar .. " " .. robar .. '{"text":"] ","color":"white"}] }')
                 commands.exec("team join " .. username .. " " .. username)
 
-                
+                content = fs.open("permit.json","r").readAll()
+                json = textutils.unserialiseJSON(content)
+                io.write(json.username)
             end
             
         else
