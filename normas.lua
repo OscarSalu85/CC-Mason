@@ -52,22 +52,22 @@ while true do
                 chat.sendMessageToPlayer("Formato incorrecto, usa 'permit help para ver el formato",username, "Server")
             else
                 if matar == "S" then
-                    matar = '{"text":"M ","color":"green"},'
+                    matarS = '{"text":"M ","color":"green"},'
                 else
-                    matar = '{"text":"M ","color":"red"},'
+                    matarS = '{"text":"M ","color":"red"},'
                 end
                 if modif == "S" then
-                    modif = '{"text":"MC ","color":"green"},'
+                    modifS = '{"text":"MC ","color":"green"},'
                 else
-                    modif = '{"text":"MC ","color":"red"},'
+                    modifS = '{"text":"MC ","color":"red"},'
                 end
                 if robar == "S" then
-                    robar = '{"text":"R","color":"green"},'
+                    robarS = '{"text":"R","color":"green"},'
                 else
-                    robar = '{"text":"R","color":"red"},'
+                    robarS = '{"text":"R","color":"red"},'
                 end
                 commands.exec("team add " .. username)
-                commands.exec("team modify " .. username ..' prefix {"text":"[","color":"white","extra":[' .. modif .. " " .. matar .. " " .. robar .. '{"text":"] ","color":"white"}] }')
+                commands.exec("team modify " .. username ..' prefix {"text":"[","color":"white","extra":[' .. modifS .. " " .. matarS .. " " .. robarS .. '{"text":"] ","color":"white"}] }')
                 commands.exec("team join " .. username .. " " .. username)
 
                 content = fs.open("permit.json","r").readAll()
