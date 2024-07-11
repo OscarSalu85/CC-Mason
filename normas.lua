@@ -34,6 +34,17 @@ while true do
             json = textutils.serialiseJSON(pedit)
             chat.sendFormattedMessageToPlayer(json,username, "Server")
 
+            sleep(1)
+
+            plist = {
+                {text = "- "},
+                {text = "'permit list'" , color = "gold"},
+                {text = " -> "},
+                {text = "Ver lista de todos los jugadores con permisos" , color = "aqua"}
+            }
+            json = textutils.serialiseJSON(plist)
+            chat.sendFormattedMessageToPlayer(json,username, "Server")
+
         elseif command == "edit" then
             error = false
             modif = string.sub(message,13,13)
