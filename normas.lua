@@ -78,6 +78,12 @@ while true do
                 file.write(json)
             end
             
+        elseif command == "list" then
+            content = fs.open("permit.json","r").readAll()
+            json = textutils.unserialiseJSON(content)
+            for i = 1, #json do
+                io.write( json[i].path .. ":" .. json[i] .. "\n")
+            end
         else
             chat.sendMessageToPlayer("Usa 'permit help' para ver los comandos disponibles",username, "Server")
         end
