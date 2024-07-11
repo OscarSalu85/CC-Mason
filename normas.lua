@@ -82,7 +82,7 @@ while true do
             content = fs.open("permit.json","r").readAll()
             json = textutils.unserialiseJSON(content)
             for i, value in pairs(json) do
-                io.write( json[i].path .. ":" .. value .. "\n")
+                io.write( i .. ":" .. value .. "\n")
             end
 
         else
