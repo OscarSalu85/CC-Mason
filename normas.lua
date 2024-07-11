@@ -69,6 +69,8 @@ while true do
                 commands.exec("team add " .. username)
                 commands.exec("team modify " .. username ..' prefix {"text":"[","color":"white","extra":[' .. modif .. " " .. matar .. " " .. robar .. '{"text":"] ","color":"white"}] }')
                 commands.exec("team join " .. username .. " " .. username)
+
+                
             end
             
         else

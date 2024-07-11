@@ -3,7 +3,7 @@ local files = fs.list("")
 for i = 1, #files do
     if files[i] ~= "rom" then
         print(files[i])
-        if files[i] ~= "startup.lua" then
+        if files[i] ~= "startup.lua" or string.sub(files[i],-5,-1) ~= ".json" then
             content = http.get("https://raw.githubusercontent.com/OscarSalu85/CC-Mason/main/" .. files[i] .. ".lua").readAll()
             if content then
                 f = fs.open(files[i], "w")
