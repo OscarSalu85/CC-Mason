@@ -83,7 +83,7 @@ while true do
             json = textutils.unserialiseJSON(content)
             for i, value in pairs(json) do
                 sleep(1)
-                chat.sendMessageToPlayer( i .. ":" .. value .. "\n",username, "Server")
+                chat.sendMessageToPlayer( i .. " : " .. value .. "\n",username, "Server")
             end
 
         else
