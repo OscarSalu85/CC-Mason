@@ -72,7 +72,10 @@ while true do
 
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
-                io.write(json.username)
+                json.username = modif .. " " .. matar .. " " .. robar
+                json = textutils.serialiseJSON(json)
+                file = fs.open("permit.json","w")
+                file.write(json)
             end
             
         else
