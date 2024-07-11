@@ -82,7 +82,8 @@ while true do
             content = fs.open("permit.json","r").readAll()
             json = textutils.unserialiseJSON(content)
             for i, value in pairs(json) do
-                io.write( i .. ":" .. value .. "\n")
+                sleep(1)
+                chat.sendMessageToPlayer( i .. ":" .. value .. "\n",username, "Server")
             end
 
         else
