@@ -119,10 +119,10 @@ while true do
         elseif command == "list" then
             content = fs.open("permit.json","r").readAll()
             json = textutils.unserialiseJSON(content)
-            for i, value in pairs(json) do
+            for i, value in pairs(json[1]) do
                 sleep(1)
-                io.write(i)
-                --chat.sendFormattedMessageToPlayer(a,username, "Server")
+                a = serialiseJSON(value)
+                chat.sendFormattedMessageToPlayer(a,username, "Server")
             end
         elseif command == "rest" then
             prest = {
