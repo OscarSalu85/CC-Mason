@@ -103,7 +103,7 @@ while true do
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
                 --json[username] = "MC-" .. modif .. " M-" .. matar .. " R-" .. robar
-                json[username] = modif .. matar .. robar
+                json[username] = modifS .. matarS .. robarS
                 json = textutils.serialiseJSON(json)
                 chat.sendFormattedMessageToPlayer(json,username, "Server")
                 --file = fs.open("permit.json","w")
