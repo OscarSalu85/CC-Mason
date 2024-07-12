@@ -96,9 +96,21 @@ while true do
                 sleep(1)
                 chat.sendMessageToPlayer( i .. " : " .. value, username, "Server")
             end
-
+        elseif command == "rest" then
+            prest = {
+                {text = "Reiniciando bot..." , color = "dark_purple"}
+            }
+            json = textutils.serialiseJSON(prest)
+            chat.sendFormattedMessageToPlayer(json,username, "Server")
+            os.reboot()
         else
-            chat.sendMessageToPlayer("Usa 'permit help' para ver los comandos disponibles",username, "Server")
+            phelp = {
+                {text = "Usa "},
+                {text = "'permit help'" , color = "gold"},
+                {text = " para ver los comandos disponibles"}
+            }
+            json = textutils.serialiseJSON(phelp)
+            chat.sendFormattedMessageToPlayer(json,username, "Server")
         end
     end
 end
