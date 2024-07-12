@@ -124,11 +124,14 @@ while true do
         elseif command == "list" then
             content = fs.open("permit.json","r").readAll()
             json = textutils.unserialiseJSON(content)
-            for i, value in pairs(json[1]) do
-                sleep(1)
-                a = textutils.serialiseJSON(value)
-                chat.sendFormattedMessageToPlayer(a,username, "Server")
+            if json[1] ~= nil then
+                for i, value in pairs(json[1]) do
+                    sleep(1)
+                    a = textutils.serialiseJSON(value)
+                    chat.sendFormattedMessageToPlayer(a,username, "Server")
+                end
             end
+            
         elseif command == "rest" then
             prest = {
                 {text = "Reiniciando bot..." , color = "dark_purple"}
