@@ -46,6 +46,17 @@ while true do
             json = textutils.serialiseJSON(plist)
             chat.sendFormattedMessageToPlayer(json,username, "Server")
 
+            sleep(1)
+
+            prest = {
+                {text = "- "},
+                {text = "'permit rest'" , color = "gold"},
+                {text = " -> "},
+                {text = "Reiniciar bot de permisos" , color = "aqua"}
+            }
+            json = textutils.serialiseJSON(prest)
+            chat.sendFormattedMessageToPlayer(json,username, "Server")
+
         elseif command == "edit" then
             error = false
             modif = string.sub(message,13,13)
