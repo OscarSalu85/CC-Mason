@@ -129,8 +129,11 @@ while true do
             if json[1] ~= nil then
                 for i, value in pairs(json) do
                     sleep(1)
-                    a = textutils.serialiseJSON(value[i])
-                    chat.sendFormattedMessageToPlayer(a,username, "Server")
+                    for x, val in pairs(json[i]) do
+                        sleep(1) 
+                        a = textutils.serialiseJSON(val)
+                        chat.sendFormattedMessageToPlayer(a,username, "Server")
+                    end
                 end
             end
             
