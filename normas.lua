@@ -83,18 +83,24 @@ while true do
             else
                 if matar == "S" then
                     matarS = '{"text":"M ","color":"green"},'
+                    matar = "green"
                 else
                     matarS = '{"text":"M ","color":"red"},'
+                    matar = "red"
                 end
                 if modif == "S" then
                     modifS = '{"text":"MC ","color":"green"},'
+                    modif = "green"
                 else
                     modifS = '{"text":"MC ","color":"red"},'
+                    modif = "red"
                 end
                 if robar == "S" then
                     robarS = '{"text":"R","color":"green"},'
+                    robar = "green"
                 else
                     robarS = '{"text":"R","color":"red"},'
+                    robar = "red"
                 end
                 commands.exec("team add " .. username)
                 commands.exec("team modify " .. username ..' prefix {"text":"[","color":"white","extra":[' .. modifS .. " " .. matarS .. " " .. robarS .. '{"text":"] ","color":"white"}] }')
@@ -103,7 +109,12 @@ while true do
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
                 --json[username] = "MC-" .. modif .. " M-" .. matar .. " R-" .. robar
-                json[username].insert(modifS,1)
+                json[username][1].text = "MC "
+                json[username][1].color = modif
+                json[username][2].text = "M "
+                json[username][2].color = matar
+                json[username][3].text = "R"
+                json[username][3].color = robar
                 json = textutils.serialiseJSON(json)
                 chat.sendFormattedMessageToPlayer(json,username, "Server")
                 --file = fs.open("permit.json","w")
