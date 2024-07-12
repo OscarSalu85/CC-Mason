@@ -74,7 +74,7 @@ while true do
             if error then
                 pform = {
                     {text = "Formato incorrecto", color = "red"},
-                    {text = ", usa "},
+                    {text = ", usa ", color = "white"},
                     {text = "'permit help'" , color = "gold"},
                     {text = " para ver el formato"}
                 }
