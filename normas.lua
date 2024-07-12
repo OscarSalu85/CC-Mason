@@ -119,7 +119,6 @@ while true do
         elseif command == "list" then
             content = fs.open("permit.json","r").readAll()
             json = textutils.unserialiseJSON(content)
-            io.write(json[1][Patata85])
             for i, value in pairs(json[1]) do
                 sleep(1)
                 a = textutils.serialiseJSON(value)
