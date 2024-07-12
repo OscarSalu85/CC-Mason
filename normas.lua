@@ -109,8 +109,10 @@ while true do
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
                 for index, value in ipairs(json) do
-                    if index == username then
-                        table.remove(json,json[index])
+                    for name, val in ipairs(value) do
+                        if name == username then
+                            table.remove(json,json[index])
+                        end
                     end
                 end
                 --json[username] = "MC-" .. modif .. " M-" .. matar .. " R-" .. robar
@@ -125,9 +127,9 @@ while true do
             content = fs.open("permit.json","r").readAll()
             json = textutils.unserialiseJSON(content)
             if json[1] ~= nil then
-                for i, value in pairs(json[1]) do
+                for i, value in pairs(json) do
                     sleep(1)
-                    a = textutils.serialiseJSON(value)
+                    a = textutils.serialiseJSON(value[i])
                     chat.sendFormattedMessageToPlayer(a,username, "Server")
                 end
             end
