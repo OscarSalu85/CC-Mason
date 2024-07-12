@@ -113,9 +113,9 @@ while true do
                 modif = {text ="MC ", color = modif}
                 matar = {text ="M ", color = matar}
                 robar = {text ="R", color = robar}
-                table.insert(json[username],modif)
-                table.insert(json[username],matar)
-                table.insert(json[username],robar)
+                table.insert(json[username],1,modif)
+                table.insert(json[username],2,matar)
+                table.insert(json[username],3,robar)
                 json = textutils.serialiseJSON(json)
                 chat.sendFormattedMessageToPlayer(json,username, "Server")
                 --file = fs.open("permit.json","w")
