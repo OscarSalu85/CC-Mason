@@ -108,6 +108,11 @@ while true do
 
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
+                for index, value in ipairs(json) do
+                    if index == username then
+                        table.remove(json,json[index])
+                    end
+                end
                 --json[username] = "MC-" .. modif .. " M-" .. matar .. " R-" .. robar
                 tabla = {[username] = {{text = username.. ": "},{text ="MC ", color = modif},{text ="M ", color = matar},{text ="R", color = robar}}}
                 table.insert(json,tabla)
