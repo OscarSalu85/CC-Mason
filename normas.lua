@@ -72,7 +72,13 @@ while true do
                 error = true
             end
             if error then
-                chat.sendMessageToPlayer("Formato incorrecto, usa 'permit help para ver el formato",username, "Server")
+                pform = {
+                    {text = "Formato incorrecto, usa "},
+                    {text = "'permit help'" , color = "gold"},
+                    {text = " para ver el formato"}
+                }
+                json = textutils.serialiseJSON(pform)
+                chat.sendFormattedMessageToPlayer(json,username, "Server")
             else
                 if matar == "S" then
                     matarS = '{"text":"M ","color":"green"},'
