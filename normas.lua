@@ -109,13 +109,8 @@ while true do
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
                 --json[username] = "MC-" .. modif .. " M-" .. matar .. " R-" .. robar
-                --json[username].insert({text ="MC ", color = modif},1)
-                modif = {text ="MC ", color = modif}
-                matar = {text ="M ", color = matar}
-                robar = {text ="R", color = robar}
-                table.insert(json[username],1,modif)
-                table.insert(json[username],2,matar)
-                table.insert(json[username],3,robar)
+                tabla = {{text = username.. ": "},{text ="MC ", color = modif},{text ="M ", color = matar},{text ="R", color = robar}}
+                table.insert(json,tabla)
                 json = textutils.serialiseJSON(json)
                 chat.sendFormattedMessageToPlayer(json,username, "Server")
                 --file = fs.open("permit.json","w")
