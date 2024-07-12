@@ -112,9 +112,8 @@ while true do
                 tabla = {{text = username.. ": "},{text ="MC ", color = modif},{text ="M ", color = matar},{text ="R", color = robar}}
                 table.insert(json,tabla)
                 json = textutils.serialiseJSON(json)
-                chat.sendFormattedMessageToPlayer(json,username, "Server")
-                --file = fs.open("permit.json","w")
-                --file.write(json)
+                file = fs.open("permit.json","w")
+                file.write(json)
             end
             
         elseif command == "list" then
