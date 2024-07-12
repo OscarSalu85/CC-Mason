@@ -110,6 +110,7 @@ while true do
                 json = textutils.unserialiseJSON(content)
                 for index, value in ipairs(json) do
                     for name, val in ipairs(value) do
+                        io.write(name)
                         if name == username then
                             table.remove(json,json[index])
                         end
