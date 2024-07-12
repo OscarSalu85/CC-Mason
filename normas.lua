@@ -73,10 +73,10 @@ while true do
             end
             if error then
                 pform = {
-                    {text = "Formato incorrecto", color = "red"},
-                    {text = ", usa ", color = "white"},
+                    {text = "Formato incorrecto,", color = "red"},
+                    {text = " usa ", color = "white"},
                     {text = "'permit help'" , color = "gold"},
-                    {text = " para ver el formato"}
+                    {text = " para ver el formato", color = "white"}
                 }
                 json = textutils.serialiseJSON(pform)
                 chat.sendFormattedMessageToPlayer(json,username, "Server")
