@@ -102,10 +102,12 @@ while true do
 
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
-                json[username] = "MC-" .. modif .. " M-" .. matar .. " R-" .. robar
+                --json[username] = "MC-" .. modif .. " M-" .. matar .. " R-" .. robar
+                json[username] = modif .. matar .. robar
                 json = textutils.serialiseJSON(json)
-                file = fs.open("permit.json","w")
-                file.write(json)
+                chat.sendFormattedMessageToPlayer(json,username, "Server")
+                --file = fs.open("permit.json","w")
+                --file.write(json)
             end
             
         elseif command == "list" then
