@@ -108,9 +108,8 @@ while true do
 
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
-                for index, value in ipairs(json) do
-                    for name, val in ipairs(value) do
-                        io.write(name)
+                for index, value in pairs(json) do
+                    for name, val in pairs(json[i]) do
                         if name == username then
                             table.remove(json,json[index])
                         end
