@@ -121,7 +121,7 @@ while true do
             json = textutils.unserialiseJSON(content)
             for i, value in pairs(json[1]) do
                 sleep(1)
-                a = serialiseJSON(value)
+                a = textutils.serialiseJSON(value)
                 chat.sendFormattedMessageToPlayer(a,username, "Server")
             end
         elseif command == "rest" then
