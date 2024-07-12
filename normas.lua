@@ -109,7 +109,7 @@ while true do
                 content = fs.open("permit.json","r").readAll()
                 json = textutils.unserialiseJSON(content)
                 --json[username] = "MC-" .. modif .. " M-" .. matar .. " R-" .. robar
-                tabla = {{text = username.. ": "},{text ="MC ", color = modif},{text ="M ", color = matar},{text ="R", color = robar}}
+                tabla = {username = {{text = username.. ": "},{text ="MC ", color = modif},{text ="M ", color = matar},{text ="R", color = robar}}}
                 table.insert(json,tabla)
                 json = textutils.serialiseJSON(json)
                 file = fs.open("permit.json","w")
