@@ -1,4 +1,5 @@
 chat = peripheral.find("chatBox")
+io.write("Bot activado")
 while true do
     local event, username, message = os.pullEvent("chat")
     inicio = string.sub(message,1,6)
