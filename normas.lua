@@ -111,7 +111,7 @@ while true do
                 for index, value in pairs(json) do
                     for name, val in pairs(json[index]) do
                         if name == username then
-                            table.remove(json,json[index])
+                            table.remove(json,index)
                         end
                     end
                 end
