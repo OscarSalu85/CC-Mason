@@ -21,31 +21,49 @@ end
 while true do
     if checkChest(rchest) then
         turtle.select(1)
-        turtle.suck(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suck(a)
+        end
 
         turtle.select(2)
-        turtle.suckUp(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suckUp(a)
+        end
 
         turtle.select(3)
-        turtle.suck(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suck(a)
+        end
 
         turtle.select(5)
-        turtle.suckUp(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suckUp(a)
+        end
 
         turtle.select(6)
-        turtle.suck(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suck(a)
+        end
 
         turtle.select(7)
-        turtle.suckUp(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suckUp(a)
+        end)
 
         turtle.select(9)
-        turtle.suck(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suck(a)
+        end
 
         turtle.select(10)
-        turtle.suckUp(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suckUp(a)
+        end
 
         turtle.select(11)
-        turtle.suck(a)
+        if turtle.getItemDetail().count > 32 then
+            turtle.suck(a)
+        end
 
         turtle.select(16)
         turtle.craft(a)
