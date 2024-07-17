@@ -6,5 +6,6 @@ while true do
     if mana == 0 then
         sleep(1)
         turtle.place()
+        sleep(2)
     end
 end
