@@ -2,10 +2,18 @@ reader = peripheral.wrap("bottom")
 redstone.setOutput("front",true)
 while true do
     state = reader.getBlockData()
-    mana = textutils.serialise(state.mana)
+    mana = state.mana
     if mana == 0 then
         sleep(1)
         turtle.place()
-        sleep(2)
+        active = true
+        while active do
+            state = reader.getBlockData()
+            mana = state.mana
+            if mana ~= 0 then
+                active = false
+            end
+        end
+        sleep(1)
     end
 end
