@@ -1,6 +1,6 @@
 pchest = peripheral.wrap("front")
 achest= peripheral.wrap("right")
-rchest= peripheral.wrap("down")
+rchest= peripheral.wrap("bottom")
 
 function checkChest(c)
     count = 0
