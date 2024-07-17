@@ -5,6 +5,7 @@ while true do
     mana = state.mana
     if mana == 0 then
         sleep(1)
+        turtle.suckUp(1)
         turtle.place()
         active = true
         while active do
