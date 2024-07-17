@@ -12,7 +12,7 @@ function checkChest(c)
             count = count + item.count
         end
     end
-    if count < 567 then
+    if count < (576 - a) then
         return true
     end
     return false
