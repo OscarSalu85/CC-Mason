@@ -23,63 +23,63 @@ while true do
         turtle.select(1)
         if turtle.getItemDetail().count == nil then
             turtle.suck(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32 then
             turtle.suck(a)
         end
 
         turtle.select(2)
         if turtle.getItemDetail().count == nil then
             turtle.suckUp(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32  then
             turtle.suckUp(a)
         end
 
         turtle.select(3)
         if turtle.getItemDetail().count == nil then
             turtle.suck(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32  then
             turtle.suck(a)
         end
 
         turtle.select(5)
         if turtle.getItemDetail().count == nil then
             turtle.suckUp(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32  then
             turtle.suckUp(a)
         end
 
         turtle.select(6)
         if turtle.getItemDetail().count == nil then
             turtle.suck(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32  then
             turtle.suck(a)
         end
 
         turtle.select(7)
         if turtle.getItemDetail().count == nil then
             turtle.suckUp(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32  then
             turtle.suckUp(a)
         end
 
         turtle.select(9)
         if turtle.getItemDetail().count == nil then
             turtle.suck(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32  then
             turtle.suck(a)
         end
 
         turtle.select(10)
         if turtle.getItemDetail().count == nil then
             turtle.suckUp(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32  then
             turtle.suckUp(a)
         end
 
         turtle.select(11)
         if turtle.getItemDetail().count == nil then
             turtle.suck(a)
-        else if turtle.getItemDetail().count < 32  then
+        elseif turtle.getItemDetail().count < 32  then
             turtle.suck(a)
         end
 
@@ -87,4 +87,5 @@ while true do
         turtle.craft(a)
         turtle.dropDown(a)
     end
-end
+end 
+
