@@ -2,7 +2,7 @@ pchest = peripheral.wrap("front")
 achest= peripheral.wrap("right")
 rchest= peripheral.wrap("bottom")
 
-a = 5
+a = 10
 
 function checkChest(c)
     count = 0
@@ -20,66 +20,49 @@ end
 
 while true do
     if checkChest(rchest) then
+
         turtle.select(1)
-        if turtle.getItemDetail().count == nil then
-            turtle.suck(a)
-        elseif turtle.getItemDetail().count < 32 then
+        if turtle.getItemCount() < 32 then
             turtle.suck(a)
         end
 
         turtle.select(2)
-        if turtle.getItemDetail().count == nil then
-            turtle.suckUp(a)
-        elseif turtle.getItemDetail().count < 32  then
+        if turtle.getItemCount() < 32  then
             turtle.suckUp(a)
         end
 
         turtle.select(3)
-        if turtle.getItemDetail().count == nil then
-            turtle.suck(a)
-        elseif turtle.getItemDetail().count < 32  then
+        if turtle.getItemCount() < 32  then
             turtle.suck(a)
         end
 
         turtle.select(5)
-        if turtle.getItemDetail().count == nil then
-            turtle.suckUp(a)
-        elseif turtle.getItemDetail().count < 32  then
+        if turtle.getItemCount() < 32  then
             turtle.suckUp(a)
         end
 
         turtle.select(6)
-        if turtle.getItemDetail().count == nil then
-            turtle.suck(a)
-        elseif turtle.getItemDetail().count < 32  then
+        if turtle.getItemCount() < 32  then
             turtle.suck(a)
         end
 
         turtle.select(7)
-        if turtle.getItemDetail().count == nil then
-            turtle.suckUp(a)
-        elseif turtle.getItemDetail().count < 32  then
+        if turtle.getItemCount() < 32  then
             turtle.suckUp(a)
         end
 
         turtle.select(9)
-        if turtle.getItemDetail().count == nil then
-            turtle.suck(a)
-        elseif turtle.getItemDetail().count < 32  then
+        if turtle.getItemCount() < 32  then
             turtle.suck(a)
         end
 
         turtle.select(10)
-        if turtle.getItemDetail().count == nil then
-            turtle.suckUp(a)
-        elseif turtle.getItemDetail().count < 32  then
+        if turtle.getItemCount() < 32  then
             turtle.suckUp(a)
         end
 
         turtle.select(11)
-        if turtle.getItemDetail().count == nil then
-            turtle.suck(a)
-        elseif turtle.getItemDetail().count < 32  then
+        if turtle.getItemCount() < 32  then
             turtle.suck(a)
         end
 
