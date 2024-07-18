@@ -1,3 +1,4 @@
+cooldown = 15
 reader = peripheral.wrap("bottom")
 redstone.setOutput("front",true)
 while true do
@@ -18,7 +19,7 @@ while true do
             if mana ~= 0 then
                 active = false
             end
-            if os.clock() - start >= 15 then
+            if os.clock() - start >= cooldown then
                 active = false
             end
         end
