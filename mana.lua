@@ -8,11 +8,14 @@ while true do
         turtle.suckUp(1)
         turtle.place()
         active = true
-        os.clock
+        start = os.clock()
         while active do
             state = reader.getBlockData()
             mana = state.mana
             if mana ~= 0 then
+                active = false
+            end
+            if os.clock() - start >= 10 then
                 active = false
             end
         end
