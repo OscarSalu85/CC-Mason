@@ -18,7 +18,7 @@ while true do
             if mana ~= 0 then
                 active = false
             end
-            if os.clock() - start >= 10 then
+            if os.clock() - start >= 15 then
                 active = false
             end
         end
