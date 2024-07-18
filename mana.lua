@@ -8,6 +8,7 @@ while true do
         turtle.suckUp(1)
         turtle.place()
         active = true
+        os.clock
         while active do
             state = reader.getBlockData()
             mana = state.mana
