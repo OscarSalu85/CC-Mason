@@ -3,6 +3,9 @@ redstone.setOutput("front",true)
 while true do
     state = reader.getBlockData()
     mana = state.mana
+    term.clear()
+    term.setCursorPos(1,1)
+    io.write(mana)
     if mana == 0 then
         sleep(1)
         turtle.suckUp(1)
